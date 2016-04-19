@@ -223,12 +223,12 @@ typedef enum
 }
 
 #pragma mark - property
-static char *tcr_refresh_block_key;
-static char *tcr_refresh_view_key;
-static char *tcr_refresh_content_view_key;
-static char *tcr_refresh_label_key;
-static char *tcr_bottom_at_key;
-static char *tcr_status_key;
+static char tcr_refresh_block_key;
+static char tcr_refresh_view_key;
+static char tcr_refresh_content_view_key;
+static char tcr_refresh_label_key;
+static char tcr_bottom_at_key;
+static char tcr_status_key;
 
 - (UIView *)refreshView
 {
