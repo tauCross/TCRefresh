@@ -38,6 +38,7 @@
             [self.tableView endRefresh];
         });
     }];
+    self.tableView.refreshLabel.textColor = HEXCOLOR(@"C7D1D6");
 }
 
 - (void)viewDidLayoutSubviews

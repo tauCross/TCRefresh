@@ -12,6 +12,8 @@
 
 @interface UIScrollView (TCRefresh)
 
+@property(nonatomic, strong, readonly)UILabel *refreshLabel;
+
 - (void)setupRefreshWithBottomAt:(CGFloat)bottomAt refreshBlock:(void (^)())refreshBlock;
 
 - (void)startRefresh;

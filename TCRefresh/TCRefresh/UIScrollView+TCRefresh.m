@@ -40,7 +40,6 @@ typedef enum
 
 @property(nonatomic, strong)UIView *refreshView;
 @property(nonatomic, strong)UIView *refreshContentView;
-@property(nonatomic, strong)UILabel *refreshLabel;
 @property(nonatomic, copy)void (^refreshBlock)();
 @property(nonatomic, assign)CGFloat bottomAt;
 @property(nonatomic, assign)TCRefreshStatus status;
