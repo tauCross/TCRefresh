@@ -199,6 +199,7 @@ typedef enum
                      animations:^{
                          @strongify(self)
                          self.status = TCRefreshStatusRefreshing;
+                         self.contentOffset = CGPointMake(0, -self.contentInset.top);
                      }
                      completion:nil];
 }

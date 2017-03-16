@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		560A5DFB59F34E7B0AA42A34 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94EF524800C7E2FE27F5B591 /* libPods.a */; };
 		5B79A10D1CC4D2CD00325F0A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B79A10C1CC4D2CD00325F0A /* main.m */; };
 		5B79A1101CC4D2CD00325F0A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B79A10F1CC4D2CD00325F0A /* AppDelegate.m */; };
 		5B79A1131CC4D2CD00325F0A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B79A1121CC4D2CD00325F0A /* ViewController.m */; };
@@ -15,9 +14,11 @@
 		5B79A1181CC4D2CE00325F0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B79A1171CC4D2CE00325F0A /* Assets.xcassets */; };
 		5B79A11B1CC4D2CE00325F0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B79A1191CC4D2CE00325F0A /* LaunchScreen.storyboard */; };
 		5B79A1251CC4D56F00325F0A /* UIScrollView+TCRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B79A1241CC4D56F00325F0A /* UIScrollView+TCRefresh.m */; };
+		7EE8AA3DA63F6C127134ABD3 /* libPods-the_tcrefresh-TCRefresh.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A10B27186EA3A16FE405A36 /* libPods-the_tcrefresh-TCRefresh.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A10B27186EA3A16FE405A36 /* libPods-the_tcrefresh-TCRefresh.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-the_tcrefresh-TCRefresh.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B79A1081CC4D2CD00325F0A /* TCRefresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCRefresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B79A10C1CC4D2CD00325F0A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5B79A10E1CC4D2CD00325F0A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -30,9 +31,8 @@
 		5B79A11C1CC4D2CE00325F0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B79A1231CC4D56F00325F0A /* UIScrollView+TCRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TCRefresh.h"; sourceTree = "<group>"; };
 		5B79A1241CC4D56F00325F0A /* UIScrollView+TCRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TCRefresh.m"; sourceTree = "<group>"; };
-		94EF524800C7E2FE27F5B591 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC7EB49708F0E10ED6EE64B8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		D8A142C1B3945C9EE8400AE4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		6C040547A791D5537DDCE6B8 /* Pods-the_tcrefresh-TCRefresh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-the_tcrefresh-TCRefresh.release.xcconfig"; path = "Pods/Target Support Files/Pods-the_tcrefresh-TCRefresh/Pods-the_tcrefresh-TCRefresh.release.xcconfig"; sourceTree = "<group>"; };
+		BA8F5F421CC230E41C05F697 /* Pods-the_tcrefresh-TCRefresh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-the_tcrefresh-TCRefresh.debug.xcconfig"; path = "Pods/Target Support Files/Pods-the_tcrefresh-TCRefresh/Pods-the_tcrefresh-TCRefresh.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,29 +40,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				560A5DFB59F34E7B0AA42A34 /* libPods.a in Frameworks */,
+				7EE8AA3DA63F6C127134ABD3 /* libPods-the_tcrefresh-TCRefresh.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		50F1939F3342C3639FD573BE /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				AC7EB49708F0E10ED6EE64B8 /* Pods.debug.xcconfig */,
-				D8A142C1B3945C9EE8400AE4 /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		5B79A0FF1CC4D2CD00325F0A = {
 			isa = PBXGroup;
 			children = (
 				5B79A10A1CC4D2CD00325F0A /* TCRefresh */,
 				5B79A1091CC4D2CD00325F0A /* Products */,
-				50F1939F3342C3639FD573BE /* Pods */,
-				CC6ECF511E0FC223177AB4C6 /* Frameworks */,
+				9029F4F7625A897FA66925C7 /* Pods */,
+				BB27C1C2EDE6D7BCCB4DE293 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,10 +99,19 @@
 			path = TCRefresh;
 			sourceTree = "<group>";
 		};
-		CC6ECF511E0FC223177AB4C6 /* Frameworks */ = {
+		9029F4F7625A897FA66925C7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				94EF524800C7E2FE27F5B591 /* libPods.a */,
+				BA8F5F421CC230E41C05F697 /* Pods-the_tcrefresh-TCRefresh.debug.xcconfig */,
+				6C040547A791D5537DDCE6B8 /* Pods-the_tcrefresh-TCRefresh.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BB27C1C2EDE6D7BCCB4DE293 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A10B27186EA3A16FE405A36 /* libPods-the_tcrefresh-TCRefresh.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -123,12 +123,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B79A11F1CC4D2CE00325F0A /* Build configuration list for PBXNativeTarget "TCRefresh" */;
 			buildPhases = (
-				D0D495263E7A0C6AB94370D9 /* Check Pods Manifest.lock */,
+				E2B77112E4F29E92ECD1E41F /* [CP] Check Pods Manifest.lock */,
 				5B79A1041CC4D2CD00325F0A /* Sources */,
 				5B79A1051CC4D2CD00325F0A /* Frameworks */,
 				5B79A1061CC4D2CD00325F0A /* Resources */,
-				7641272E24851EDD24DE3DAC /* Embed Pods Frameworks */,
-				D4FBC9DF9CC49971BB48D5C2 /* Copy Pods Resources */,
+				D7C100B046E805CD13B9899D /* [CP] Embed Pods Frameworks */,
+				654295339321C7378E55C80D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -185,49 +185,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7641272E24851EDD24DE3DAC /* Embed Pods Frameworks */ = {
+		654295339321C7378E55C80D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-the_tcrefresh-TCRefresh/Pods-the_tcrefresh-TCRefresh-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D0D495263E7A0C6AB94370D9 /* Check Pods Manifest.lock */ = {
+		D7C100B046E805CD13B9899D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-the_tcrefresh-TCRefresh/Pods-the_tcrefresh-TCRefresh-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D4FBC9DF9CC49971BB48D5C2 /* Copy Pods Resources */ = {
+		E2B77112E4F29E92ECD1E41F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -350,7 +350,7 @@
 		};
 		5B79A1201CC4D2CE00325F0A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AC7EB49708F0E10ED6EE64B8 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = BA8F5F421CC230E41C05F697 /* Pods-the_tcrefresh-TCRefresh.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TCRefresh/Info.plist;
@@ -363,7 +363,7 @@
 		};
 		5B79A1211CC4D2CE00325F0A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D8A142C1B3945C9EE8400AE4 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 6C040547A791D5537DDCE6B8 /* Pods-the_tcrefresh-TCRefresh.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TCRefresh/Info.plist;

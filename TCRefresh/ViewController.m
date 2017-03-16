@@ -32,13 +32,18 @@
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
     @weakify(self)
-    [self.tableView setupRefreshWithBottomAt:200 refreshBlock:^{
+    [self.tableView setupRefreshWithBottomAt:0 refreshBlock:^{
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             @strongify(self)
             [self.tableView endRefresh];
         });
     }];
     self.tableView.refreshLabel.textColor = HEXCOLOR(@"C7D1D6");
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        @strongify(self);
+        [self.tableView startRefresh];
+    });
 }
 
 - (void)viewDidLayoutSubviews
