@@ -18,5 +18,6 @@
 
 - (void)startRefresh;
 - (void)endRefresh;
+- (BOOL)isRefreshing;
 
 @end

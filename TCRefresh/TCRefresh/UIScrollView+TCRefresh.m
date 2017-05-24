@@ -222,6 +222,11 @@ typedef enum
                      }];
 }
 
+- (BOOL)isRefreshing
+{
+    return self.status == TCRefreshStatusRefreshing;
+}
+
 #pragma mark - property
 static char tcr_refresh_block_key;
 static char tcr_refresh_view_key;

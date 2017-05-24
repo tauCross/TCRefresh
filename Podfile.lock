@@ -6,7 +6,7 @@ PODS:
   - ReactiveCocoa/no-arc (2.5)
   - ReactiveCocoa/UI (2.5):
     - ReactiveCocoa/Core
-  - TCCocoaExpand (0.0.1)
+  - TCCocoaExpand (0.0.4)
 
 DEPENDENCIES:
   - ReactiveCocoa
@@ -14,8 +14,8 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
-  TCCocoaExpand: c7de439116272e84cd328344f6da83a9046eb66d
+  TCCocoaExpand: 0236824e0bd6f606dd9fc06018d2424f6444dd3a
 
 PODFILE CHECKSUM: f73420ef9491a4cbf03f5280712aa7ec13c54125
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1
