@@ -167,11 +167,6 @@ typedef enum
             }
             self.refreshView.bottom = self.bottomAt;
         }];
-        RAC(self, contentInset) = [RACObserve(self, status) map:^id(NSNumber *number) {
-            TCRefreshStatus status = (TCRefreshStatus)number.integerValue;
-            CGFloat top = (status == TCRefreshStatusDone || status == TCRefreshStatusRefreshing) ? kRefreshViewHeight : 0;
-            return [NSValue valueWithUIEdgeInsets:UIEdgeInsetsMake(top, 0, 0, 0)];
-        }];
         [RACObserve(self, status) subscribeNext:^(NSNumber *number) {
             @strongify(self)
             TCRefreshStatus status = (TCRefreshStatus)[number integerValue];
@@ -182,8 +177,15 @@ typedef enum
                     self.refreshBlock();
                 }
             }
+            CGFloat top = (status == TCRefreshStatusDone || status == TCRefreshStatusRefreshing) ? kRefreshViewHeight : 0;
+            if(self.contentInset.top != top)
+            {
+                self.contentInset = UIEdgeInsetsMake(top, 0, 0, 0);
+                [self setContentOffset:CGPointMake(0, -top) animated:YES];
+            }
         }];
     }
+    [self bringSubviewToFront:self.refreshView];
 }
 
 - (void)startRefresh
