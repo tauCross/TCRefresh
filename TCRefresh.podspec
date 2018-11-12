@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "TCRefresh"
-  s.version      = "0.0.8"
+  s.version      = "0.0.9"
   s.summary      = "refresh control"
 
   # This description is used to generate tags and improve search results.
