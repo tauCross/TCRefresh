@@ -323,6 +323,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BA8F5F421CC230E41C05F697 /* Pods-the_tcrefresh-TCRefresh.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TCRefresh/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -336,6 +337,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6C040547A791D5537DDCE6B8 /* Pods-the_tcrefresh-TCRefresh.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TCRefresh/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
