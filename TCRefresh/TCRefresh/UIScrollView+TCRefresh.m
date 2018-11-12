@@ -10,7 +10,7 @@
 
 #import <objc/runtime.h>
 
-#import "ReactiveCocoa.h"
+#import <ReactiveObjC.h>
 #import "TCCocoaExpand.h"
 
 

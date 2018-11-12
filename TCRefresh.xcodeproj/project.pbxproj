@@ -127,8 +127,6 @@
 				5B79A1041CC4D2CD00325F0A /* Sources */,
 				5B79A1051CC4D2CD00325F0A /* Frameworks */,
 				5B79A1061CC4D2CD00325F0A /* Resources */,
-				D7C100B046E805CD13B9899D /* [CP] Embed Pods Frameworks */,
-				654295339321C7378E55C80D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -185,36 +183,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		654295339321C7378E55C80D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-the_tcrefresh-TCRefresh/Pods-the_tcrefresh-TCRefresh-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D7C100B046E805CD13B9899D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-the_tcrefresh-TCRefresh/Pods-the_tcrefresh-TCRefresh-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		E2B77112E4F29E92ECD1E41F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
