@@ -84,14 +84,14 @@ typedef enum
                     switch(status)
                     {
                         case TCRefreshStatusRefreshing:
-                            return kRefreshing;
+                            return self.hint_Refreshing;
                         case TCRefreshStatusNormal:
-                            return kPullToRefresh;
+                            return self.hint_PullToRefresh;
                         case TCRefreshStatusWillRefresh:
-                            return kLoosenToRefresh;
+                            return self.hint_LoosenToRefresh;
                         case TCRefreshStatusDone:
                         case TCRefreshStatusDoneClose:
-                            return kRefreshDone;
+                            return self.hint_RefreshDone;
                     }
                 }];
             }
@@ -236,6 +236,10 @@ static char tcr_refresh_content_view_key;
 static char tcr_refresh_label_key;
 static char tcr_bottom_at_key;
 static char tcr_status_key;
+static char tcr_hint_PullToRefresh_key;
+static char tcr_hint_Refreshing_key;
+static char tcr_hint_RefreshDone_key;
+static char tcr_hint_LoosenToRefresh_key;
 
 - (UIView *)refreshView
 {
@@ -296,5 +300,69 @@ static char tcr_status_key;
 {
     objc_setAssociatedObject(self, &tcr_status_key, @(status), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
+
+- (NSString *)hint_Refreshing
+{
+    NSString *s = objc_getAssociatedObject(self, &tcr_hint_Refreshing_key);
+    if(s == nil)
+    {
+        s = (NSString *)kRefreshing;
+    }
+    return s;
+}
+
+- (void)setHint_Refreshing:(NSString *)hint_Refreshing
+{
+    objc_setAssociatedObject(self, &tcr_hint_Refreshing_key, hint_Refreshing, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (NSString *)hint_RefreshDone
+{
+    NSString *s = objc_getAssociatedObject(self, &tcr_hint_RefreshDone_key);
+    if(s == nil)
+    {
+        s = (NSString *)kRefreshDone;
+    }
+    return s;
+
+}
+
+- (void)setHint_RefreshDone:(NSString *)hint_RefreshDone
+{
+    objc_setAssociatedObject(self, &tcr_hint_RefreshDone_key, hint_RefreshDone, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (NSString *)hint_PullToRefresh
+{
+    NSString *s = objc_getAssociatedObject(self, &tcr_hint_PullToRefresh_key);
+    if(s == nil)
+    {
+        s = (NSString *)kPullToRefresh;
+    }
+    return s;
+
+}
+
+- (void)setHint_PullToRefresh:(NSString *)hint_PullToRefresh
+{
+    objc_setAssociatedObject(self, &tcr_hint_PullToRefresh_key, hint_PullToRefresh, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (NSString *)hint_LoosenToRefresh
+{
+    NSString *s = objc_getAssociatedObject(self, &tcr_hint_LoosenToRefresh_key);
+    if(s == nil)
+    {
+        s = (NSString *)kLoosenToRefresh;
+    }
+    return s;
+
+}
+
+- (void)setHint_LoosenToRefresh:(NSString *)hint_LoosenToRefresh
+{
+    objc_setAssociatedObject(self, &tcr_hint_LoosenToRefresh_key, hint_LoosenToRefresh, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
 
 @end

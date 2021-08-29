@@ -20,4 +20,9 @@
 - (void)endRefresh;
 - (BOOL)isRefreshing;
 
+@property(nonatomic, strong)NSString *hint_PullToRefresh;
+@property(nonatomic, strong)NSString *hint_Refreshing;
+@property(nonatomic, strong)NSString *hint_RefreshDone;
+@property(nonatomic, strong)NSString *hint_LoosenToRefresh;
+
 @end

@@ -7,7 +7,7 @@ DEPENDENCIES:
   - TCCocoaExpand
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - ReactiveObjC
     - TCCocoaExpand
 
@@ -17,4 +17,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: ebc1ea240dde252a7c564efc007e53c94ad3f20a
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.10.1
