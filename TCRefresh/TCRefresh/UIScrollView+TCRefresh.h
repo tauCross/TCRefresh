@@ -14,7 +14,7 @@
 
 @property(nonatomic, strong, readonly)UILabel *refreshLabel;
 
-- (void)setupRefreshWithBottomAt:(CGFloat)bottomAt refreshBlock:(void (^)())refreshBlock;
+- (void)setupRefreshWithBottomAt:(CGFloat)bottomAt refreshBlock:(void (^)(void))refreshBlock;
 
 - (void)startRefresh;
 - (void)endRefresh;

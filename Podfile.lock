@@ -1,6 +1,6 @@
 PODS:
-  - ReactiveObjC (3.1.0)
-  - TCCocoaExpand (0.0.4)
+  - ReactiveObjC (3.1.1)
+  - TCCocoaExpand (0.0.12)
 
 DEPENDENCIES:
   - ReactiveObjC
@@ -12,9 +12,9 @@ SPEC REPOS:
     - TCCocoaExpand
 
 SPEC CHECKSUMS:
-  ReactiveObjC: 2a38ea15335de4119d8b17caf1db1484f61db902
-  TCCocoaExpand: 0236824e0bd6f606dd9fc06018d2424f6444dd3a
+  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
+  TCCocoaExpand: 4b298a48f24808658b327ee49771c47902ed966d
 
 PODFILE CHECKSUM: ebc1ea240dde252a7c564efc007e53c94ad3f20a
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.15.2

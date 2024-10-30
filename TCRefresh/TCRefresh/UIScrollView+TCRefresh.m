@@ -40,7 +40,7 @@ typedef enum
 
 @property(nonatomic, strong)UIView *refreshView;
 @property(nonatomic, strong)UIView *refreshContentView;
-@property(nonatomic, copy)void (^refreshBlock)();
+@property(nonatomic, copy)void (^refreshBlock)(void);
 @property(nonatomic, assign)CGFloat bottomAt;
 @property(nonatomic, assign)TCRefreshStatus status;
 
@@ -50,7 +50,7 @@ typedef enum
 
 @implementation UIScrollView (TCRefresh)
 
-- (void)setupRefreshWithBottomAt:(CGFloat)bottomAt refreshBlock:(void (^)())refreshBlock
+- (void)setupRefreshWithBottomAt:(CGFloat)bottomAt refreshBlock:(void (^)(void))refreshBlock
 {
     @weakify(self)
     self.refreshBlock = refreshBlock;
@@ -74,10 +74,10 @@ typedef enum
                 [RACObserve(self.refreshContentView, frame) subscribeNext:^(NSValue *value) {
                     @strongify(self)
                     CGRect rect = value.CGRectValue;
-                    self.refreshLabel.height = 20;
-                    self.refreshLabel.width = rect.size.width;
-                    self.refreshLabel.centerX = rect.size.width / 2;
-                    self.refreshLabel.bottom = rect.size.height - 10;
+                    self.refreshLabel.tc_height = 20;
+                    self.refreshLabel.tc_width = rect.size.width;
+                    self.refreshLabel.tc_centerX = rect.size.width / 2;
+                    self.refreshLabel.tc_bottom = rect.size.height - 10;
                 }];
                 RAC(self.refreshLabel, text) = [RACObserve(self, status) map:^id(NSNumber *number) {
                     TCRefreshStatus status = (TCRefreshStatus)number.integerValue;
@@ -97,16 +97,16 @@ typedef enum
             }
             [RACObserve(self.refreshView, frame) subscribeNext:^(id x) {
                 @strongify(self)
-                self.refreshContentView.width = self.refreshView.width;
-                self.refreshContentView.height = kRefreshViewHeight;
-                self.refreshContentView.left = 0;
-                self.refreshContentView.bottom = self.refreshView.height;
+                self.refreshContentView.tc_width = self.refreshView.tc_width;
+                self.refreshContentView.tc_height = kRefreshViewHeight;
+                self.refreshContentView.tc_left = 0;
+                self.refreshContentView.tc_bottom = self.refreshView.tc_height;
             }];
         }
         [RACObserve(self, frame) subscribeNext:^(id x) {
             @strongify(self)
-            self.refreshView.width = self.width;
-            self.refreshView.left = 0;
+            self.refreshView.tc_width = self.tc_width;
+            self.refreshView.tc_left = 0;
         }];
         [RACObserve(self, contentOffset) subscribeNext:^(NSValue *value) {
             @strongify(self)
@@ -150,22 +150,22 @@ typedef enum
             {
                 if(offset.y < - kRefreshViewHeight)
                 {
-                    self.refreshView.height = kRefreshViewHeight;
+                    self.refreshView.tc_height = kRefreshViewHeight;
                 }
                 else
                 {
-                    self.refreshView.height = - offset.y;
+                    self.refreshView.tc_height = - offset.y;
                 }
             }
             else
             {
-                self.refreshView.height = 0;
+                self.refreshView.tc_height = 0;
             }
             if(status == TCRefreshStatusRefreshing || status == TCRefreshStatusDone)
             {
-                self.refreshView.height = kRefreshViewHeight;
+                self.refreshView.tc_height = kRefreshViewHeight;
             }
-            self.refreshView.bottom = self.bottomAt;
+            self.refreshView.tc_bottom = self.bottomAt;
         }];
         [RACObserve(self, status) subscribeNext:^(NSNumber *number) {
             @strongify(self)
@@ -271,12 +271,12 @@ static char tcr_hint_LoosenToRefresh_key;
     objc_setAssociatedObject(self, &tcr_refresh_label_key, refreshLabel, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (void (^)())refreshBlock
+- (void (^)(void))refreshBlock
 {
     return objc_getAssociatedObject(self, &tcr_refresh_block_key);
 }
 
-- (void)setRefreshBlock:(void (^)())refreshBlock
+- (void)setRefreshBlock:(void (^)(void))refreshBlock
 {
     return objc_setAssociatedObject(self, &tcr_refresh_block_key, refreshBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
